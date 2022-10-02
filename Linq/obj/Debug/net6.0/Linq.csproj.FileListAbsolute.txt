@@ -1,0 +1,17 @@
+D:\project\Linq\Linq\bin\Debug\net6.0\Linq.exe
+D:\project\Linq\Linq\bin\Debug\net6.0\Linq.deps.json
+D:\project\Linq\Linq\bin\Debug\net6.0\Linq.runtimeconfig.json
+D:\project\Linq\Linq\bin\Debug\net6.0\Linq.dll
+D:\project\Linq\Linq\bin\Debug\net6.0\Linq.pdb
+D:\project\Linq\Linq\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.csproj.AssemblyReference.cache
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.AssemblyInfoInputs.cache
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.AssemblyInfo.cs
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.csproj.CoreCompileInputs.cache
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.csproj.CopyComplete
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.dll
+D:\project\Linq\Linq\obj\Debug\net6.0\refint\Linq.dll
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.pdb
+D:\project\Linq\Linq\obj\Debug\net6.0\Linq.genruntimeconfig.cache
+D:\project\Linq\Linq\obj\Debug\net6.0\ref\Linq.dll
