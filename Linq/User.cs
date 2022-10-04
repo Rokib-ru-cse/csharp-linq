@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Linq
 {
@@ -22,7 +16,9 @@ namespace Linq
         public static List<User> GetUsers()
         {
             List<User> users = new List<User>();
-            StreamReader r = new StreamReader("D:\\project\\Linq\\Linq\\JsonFiles\\users.json");
+            string path = Environment.CurrentDirectory;
+            var relation = @"..\..\..\..\JsonFiles\";
+            StreamReader r = new StreamReader(Path.Combine(path + relation + "users.json"));
             var jsonusers = r.ReadToEnd();
             users = JsonConvert.DeserializeObject<List<User>>(jsonusers);
             return users;

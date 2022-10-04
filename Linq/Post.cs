@@ -1,9 +1,4 @@
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Linq
 {
@@ -17,7 +12,9 @@ namespace Linq
         public static List<Post> GetPosts()
         {
             List<Post> posts = new List<Post>();
-            StreamReader r = new StreamReader("D:\\project\\Linq\\Linq\\JsonFiles\\posts.json");
+            string path = Environment.CurrentDirectory;
+            var relation = @"..\..\..\..\JsonFiles\";
+            StreamReader r = new StreamReader(Path.Combine(path + relation + "posts.json"));
             var jsoncomments = r.ReadToEnd();
             posts = JsonConvert.DeserializeObject<List<Post>>(jsoncomments);
             return posts;

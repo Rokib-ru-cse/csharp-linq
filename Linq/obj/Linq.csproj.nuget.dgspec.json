@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\Linq\\Linq\\Linq.csproj": {}
+    "G:\\project\\csharp-linq\\Linq\\Linq.csproj": {}
   },
   "projects": {
-    "D:\\project\\Linq\\Linq\\Linq.csproj": {
+    "G:\\project\\csharp-linq\\Linq\\Linq.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\Linq\\Linq\\Linq.csproj",
+        "projectUniqueName": "G:\\project\\csharp-linq\\Linq\\Linq.csproj",
         "projectName": "Linq",
-        "projectPath": "D:\\project\\Linq\\Linq\\Linq.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\Linq\\Linq\\obj\\",
+        "projectPath": "G:\\project\\csharp-linq\\Linq\\Linq.csproj",
+        "packagesPath": "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\",
+        "outputPath": "G:\\project\\csharp-linq\\Linq\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rokib.DESKTOP-SB2ILP7\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
