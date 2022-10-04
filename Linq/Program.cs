@@ -8,7 +8,7 @@ var posts = Post.GetPosts();
 var todos = Todo.GetTodos();
 var users = User.GetUsers();
 
-var filteredUser = users.Select(u => new /*User*/
+var methodSyntax = users.Select(u => new /*User*/
 {
     id = u.id,
     name = u.name,
@@ -30,7 +30,21 @@ var filteredUser = users.Select(u => new /*User*/
 
 }).ToList();
 
+var querySyntax = (from t in todos
+                   join u in users on t.userId equals u.id
+                   select new
+                   {
+                       id = u.id,
+                       name = u.name,
+                       email = u.email,
+                       phone = u.phone,
+                       username = u.username,
+                       website = u.website,
+                       company = u.company,
+                       address = u.address,
+                       todos = t,
 
+                   }).ToList();
 
 
 
