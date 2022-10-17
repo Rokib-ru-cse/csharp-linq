@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Linq
 {
@@ -18,7 +13,9 @@ namespace Linq
         public static List<Comment> GetComments()
         {
             List<Comment> comments = new List<Comment>();
-            StreamReader r = new StreamReader("D:\\project\\Linq\\Linq\\JsonFiles\\comments.json");
+            string path = Environment.CurrentDirectory;
+            var relation = @"..\..\..\..\JsonFiles\";
+            StreamReader r = new StreamReader(Path.Combine(path + relation + "comments.json"));
             var jsoncomments = r.ReadToEnd();
             comments = JsonConvert.DeserializeObject<List<Comment>>(jsoncomments);
             return comments;

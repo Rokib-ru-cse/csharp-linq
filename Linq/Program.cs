@@ -2,14 +2,13 @@
 
 
 using Linq;
-using System.Collections.Generic;
 
 var comments = Comment.GetComments();
 var posts = Post.GetPosts();
 var todos = Todo.GetTodos();
 var users = User.GetUsers();
 
-var filteredUser = users.Select(u => new /*User*/
+var methodSyntax = users.Select(u => new /*User*/
 {
     id = u.id,
     name = u.name,
@@ -19,30 +18,39 @@ var filteredUser = users.Select(u => new /*User*/
     website = u.website,
     company = u.company,
     address = u.address,
-    todos = todos.Where(t=>t.userId==u.id).ToList(),
-    posts = posts.Where(p=>p.userId)
+    todos = todos.Where(t => t.userId == u.id).ToList(),
+    posts = posts.Where(p => p.userId == u.id).Select(p => new /*Post*/
+    {
+        id = p.id,
+        userId = p.userId,
+        title = p.title,
+        body = p.body,
+        comments = comments.Where(c => c.postId == p.id).ToList()
+    }).ToList()
 
 }).ToList();
 
-var selectedPosts = posts.Select(p => new {
-    id=p.id,
-    comments = comments.Where(c => c.postId == p.id).ToList(),
-} ).ToList();
-
-var selectedComments = (from u in users
-                        join t in todos 
-                        on u.id equals t.userId
-                       join p in posts
-                       on u.id equals p.userId
-                       join c in comments
-                       on p.id equals c.postId
-                        select new
-                        {
-                            id = u.id,
-                            todos =t,
-                            posts = p,
-
-                        }).ToList();
+var querySyntax = (from u in users
+                   select new
+                   {
+                       id = u.id,
+                       name = u.name,
+                       email = u.email,
+                       phone = u.phone,
+                       username = u.username,
+                       website = u.website,
+                       company = u.company,
+                       address = u.address,
+                       todos = (from t in todos where u.id==t.userId select t).ToList(),
+                       posts = (from p in posts where u.id==p.userId select new
+                       {
+                           id = p.id,
+                           userId = p.userId,
+                           title = p.title,
+                           body = p.body,
+                           comments = (from c in comments where p.id == c.postId select c).ToList()
+                       }).ToList()
+                   }).ToList();
 
 
 
